@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acme Portal - Account Settings (VEILAGENT Target)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="logo">
+        <span class="logo-badge">ACME</span>
+        <span>Secure Portal</span>
+      </div>
+      <div class="user-status">
+        <span class="dot online"></span> Active Session
+      </div>
+    </header>
+
+    <main class="settings-card">
+      <div class="card-header">
+        <h2>Personal & Account Settings</h2>
+        <p class="subtitle">Synthetic profile fixture for SIH/ISRO 26171 on-device privacy evaluation.</p>
+      </div>
+
+      <div id="status-banner" class="status-banner hidden">
+        <span class="check-icon">✓</span>
+        <span id="status-message">Profile changes saved successfully!</span>
+      </div>
+
+      <form id="settings-form" onsubmit="event.preventDefault(); saveChanges();">
+        <div class="avatar-section">
+          <div class="avatar-wrapper">
+            <img id="profile-face" src="./assets/face.jpg" alt="Profile Picture" class="avatar-img" data-veil-id="profile_photo" data-veil-type="face" />
+            <div class="avatar-badge">Verified ID</div>
+          </div>
+          <div class="avatar-details">
+            <h4>Profile Photo</h4>
+            <p>Biometric photo detected and redacted on-device by MediaPipe face vision.</p>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input 
+              type="text" 
+              id="fullName" 
+              name="name" 
+              autocomplete="name"
+              value="Rahul Sharma" 
+              data-veil-id="input_fullname" 
+              data-veil-sensitive="true"
+              data-veil-type="person"
+              required 
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Work Email</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              autocomplete="email"
+              value="rahul.sharma@example.com" 
+              data-veil-id="input_email" 
+              data-veil-sensitive="true"
+              data-veil-type="email"
+              required 
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input 
+              type="tel" 
+              id="phone" 
+              name="tel" 
+              autocomplete="tel"
+              value="+91 98765 43210" 
+              data-veil-id="input_phone" 
+              data-veil-sensitive="true"
+              data-veil-type="phone"
+              required 
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Account Password</label>
+            <input 
+              type="password" 
+              id="password" 
+              name="password" 
+              value="SuperSecretPassword123!" 
+              data-veil-id="input_password" 
+              data-veil-sensitive="true"
+              data-veil-type="password"
+              required 
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="cardNumber">Corporate Credit Card</label>
+            <input 
+              type="text" 
+              id="cardNumber" 
+              name="cc-number" 
+              autocomplete="cc-number"
+              value="4532 8901 2345 6789" 
+              data-veil-id="input_card" 
+              data-veil-sensitive="true"
+              data-veil-type="card"
+              required 
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="taxId">Indian PAN / National Tax ID</label>
+            <input 
+              type="text" 
+              id="taxId" 
+              name="taxid" 
+              value="ABCDE1234F" 
+              data-veil-id="input_pan" 
+              data-veil-sensitive="true"
+              data-veil-type="pan"
+              required 
+            />
+          </div>
+        </div>
+
+        <div class="actions-row">
+          <button 
+            type="button" 
+            id="btn-cancel" 
+            class="btn btn-secondary" 
+            data-veil-id="btn_cancel"
+            onclick="cancelAction()"
+          >
+            Cancel
+          </button>
+          <button 
+            type="submit" 
+            id="btn-save" 
+            class="btn btn-primary" 
+            data-veil-id="btn_save"
+          >
+            Save Changes
+          </button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

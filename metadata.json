@@ -1,0 +1,6 @@
+{
+  "name": "VEILAGENT - On-device Visual Privacy & Browser Agent",
+  "description": "Smart India Hackathon Problem 26171: On-device visual perception, local privacy redaction firewall, and safe remote VLM reasoning for lightweight browser agents.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

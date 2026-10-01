@@ -8,8 +8,8 @@ body {
   width: 380px;
   min-height: 480px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background-color: #0f172a;
-  color: #f1f5f9;
+  background-color: #002b36;
+  color: #e0e0e0;
   font-size: 13px;
   line-height: 1.4;
 }
@@ -18,7 +18,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 16px;
-  gap: 14px;
+  gap: 12px;
 }
 
 .header {
@@ -26,7 +26,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding-bottom: 12px;
-  border-bottom: 1px solid #1e293b;
+  border-bottom: 1px solid rgba(0, 64, 82, 0.4);
 }
 
 .brand {
@@ -36,19 +36,19 @@ body {
 }
 
 .badge {
-  background: #3b82f6;
-  color: #fff;
-  font-weight: 800;
+  background: #003847;
+  color: #4fc1ff;
+  font-weight: 700;
   padding: 2px 6px;
   border-radius: 4px;
   font-size: 10px;
-  letter-spacing: 0.5px;
+  font-family: monospace;
 }
 
 .title {
-  font-weight: 700;
-  font-size: 14px;
-  color: #f8fafc;
+  font-weight: 600;
+  font-size: 13px;
+  color: #e0e0e0;
 }
 
 .status-pill {
@@ -56,52 +56,52 @@ body {
   align-items: center;
   gap: 5px;
   font-size: 11px;
-  padding: 3px 8px;
-  border-radius: 12px;
-  background: rgba(34, 197, 94, 0.15);
-  color: #4ade80;
-  border: 1px solid rgba(34, 197, 94, 0.3);
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: #00212b;
+  color: #86969c;
+  border: 1px solid rgba(0, 64, 82, 0.4);
 }
 
 .status-dot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #22c55e;
+  background: #4fc1ff;
 }
 
 .section-card {
-  background: #1e293b;
-  border: 1px solid #334155;
-  border-radius: 8px;
+  background: #00212b;
+  border: 1px solid rgba(0, 64, 82, 0.4);
+  border-radius: 6px;
   padding: 12px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .card-title {
-  font-size: 11px;
+  font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.6px;
-  color: #94a3b8;
-  font-weight: 700;
+  color: #86969c;
+  font-weight: 600;
 }
 
 .task-input {
   width: 100%;
-  background: #0f172a;
-  border: 1px solid #475569;
-  color: #f8fafc;
-  padding: 8px 10px;
-  border-radius: 6px;
+  background: #002b36;
+  border: 1px solid #003847;
+  color: #e0e0e0;
+  padding: 7px 10px;
+  border-radius: 4px;
   font-size: 12px;
   font-family: inherit;
 }
 
 .task-input:focus {
   outline: none;
-  border-color: #38bdf8;
+  border-color: #4fc1ff;
 }
 
 .button-group {
@@ -111,8 +111,8 @@ body {
 
 .btn {
   flex: 1;
-  padding: 8px 12px;
-  border-radius: 6px;
+  padding: 7px 12px;
+  border-radius: 4px;
   font-weight: 600;
   font-size: 12px;
   cursor: pointer;
@@ -134,58 +134,68 @@ body {
 }
 
 .btn-primary {
-  background: #2563eb;
-  color: white;
+  background: #004052;
+  color: #e0e0e0;
+  border: 1px solid rgba(79, 193, 255, 0.4);
+}
+
+.btn-primary:hover {
+  color: #ffffff;
 }
 
 .btn-secondary {
-  background: #334155;
-  color: #cbd5e1;
+  background: #003847;
+  color: #86969c;
+}
+
+.btn-secondary:hover {
+  color: #e0e0e0;
+  background: #004052;
 }
 
 .btn-accent {
-  background: #059669;
-  color: white;
+  background: #004052;
+  color: #4fc1ff;
 }
 
 .metrics-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px;
+  gap: 6px;
 }
 
 .metric-item {
-  background: #0f172a;
-  padding: 8px;
-  border-radius: 6px;
-  border: 1px solid #334155;
+  background: #002b36;
+  padding: 7px 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 64, 82, 0.4);
 }
 
 .metric-label {
   font-size: 10px;
-  color: #94a3b8;
+  color: #86969c;
 }
 
 .metric-val {
-  font-size: 14px;
-  font-weight: 700;
-  color: #f8fafc;
-  margin-top: 2px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin-top: 1px;
 }
 
 .metric-highlight {
-  color: #38bdf8;
+  color: #4fc1ff;
 }
 
 .metric-safe {
-  color: #4ade80;
+  color: #4fc1ff;
 }
 
 .action-result {
-  background: #0f172a;
-  border: 1px solid #334155;
-  border-radius: 6px;
-  padding: 10px;
+  background: #002b36;
+  border: 1px solid rgba(0, 64, 82, 0.4);
+  border-radius: 4px;
+  padding: 8px;
   font-size: 11px;
 }
 
@@ -196,45 +206,45 @@ body {
 }
 
 .action-name {
-  font-weight: 700;
-  color: #38bdf8;
+  font-weight: 600;
+  color: #4fc1ff;
 }
 
 .action-conf {
-  color: #94a3b8;
+  color: #86969c;
 }
 
 .guard-pill {
   display: inline-block;
   padding: 2px 6px;
-  border-radius: 4px;
+  border-radius: 3px;
   font-size: 10px;
-  font-weight: 700;
+  font-weight: 600;
   margin-top: 4px;
 }
 
 .guard-pill.passed {
-  background: rgba(34, 197, 94, 0.2);
-  color: #4ade80;
-  border: 1px solid rgba(34, 197, 94, 0.3);
+  background: #003847;
+  color: #4fc1ff;
+  border: 1px solid rgba(79, 193, 255, 0.3);
 }
 
 .guard-pill.blocked {
-  background: rgba(239, 68, 68, 0.2);
-  color: #f87171;
-  border: 1px solid rgba(239, 68, 68, 0.3);
+  background: #002b36;
+  color: #f44747;
+  border: 1px solid rgba(244, 71, 71, 0.4);
 }
 
 .payload-inspector {
   max-height: 120px;
   overflow-y: auto;
-  background: #020617;
-  border: 1px solid #334155;
+  background: #001b24;
+  border: 1px solid rgba(0, 64, 82, 0.4);
   border-radius: 4px;
   padding: 6px;
   font-family: monospace;
   font-size: 10px;
-  color: #a5f3fc;
+  color: #e0e0e0;
   white-space: pre-wrap;
   word-break: break-all;
 }

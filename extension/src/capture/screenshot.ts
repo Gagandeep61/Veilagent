@@ -12,7 +12,7 @@ export async function captureTabScreenshot(tabId?: number): Promise<CaptureResul
   }
 
   // Capture visible tab as JPEG
-  const dataUrl = await chrome.tabs.captureVisibleTab(undefined, {
+  const dataUrl = await chrome.tabs.captureVisibleTab({
     format: 'jpeg',
     quality: 80,
   });

@@ -307,45 +307,45 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans">
+    <div className="min-h-screen bg-[#002B36] text-[#E0E0E0] flex flex-col font-sans">
       {/* Top Navigation Bar */}
-      <header className="border-b border-slate-800 bg-slate-900/90 backdrop-blur sticky top-0 z-50 px-6 py-3.5 flex flex-wrap items-center justify-between gap-4">
+      <header className="border-b border-[#003847]/70 bg-[#00212B] sticky top-0 z-50 px-6 py-3 flex flex-wrap items-center justify-between gap-4">
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-lg bg-blue-600 flex items-center justify-center shadow-lg shadow-blue-600/30">
-            <Shield className="w-5 h-5 text-white" />
+          <div className="w-8 h-8 rounded bg-[#003847] flex items-center justify-center text-[#4FC1FF]">
+            <Shield className="w-4 h-4 text-[#4FC1FF]" />
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-extrabold text-base tracking-tight text-white">VEILAGENT</span>
-              <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-blue-500/20 text-blue-400 border border-blue-500/30">
+              <span className="font-bold text-sm tracking-wider text-[#E0E0E0]">VEILAGENT</span>
+              <span className="text-[10px] font-mono tracking-wider px-2 py-0.5 rounded bg-[#003847] text-[#4FC1FF]">
                 SIH / ISRO 26171
               </span>
             </div>
-            <p className="text-xs text-slate-400">On-Device Visual Perception for Lightweight Browser Agents</p>
+            <p className="text-xs text-[#86969C]">On-Device Visual Perception for Lightweight Browser Agents</p>
           </div>
         </div>
 
         {/* System Status Indicators */}
         <div className="flex items-center gap-2 text-xs">
-          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span>Local MediaPipe WASM: Ready</span>
+          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#002B36] text-[#86969C]">
+            <span className="w-2 h-2 rounded-full bg-[#4FC1FF]"></span>
+            <span>MediaPipe WASM: Ready</span>
           </div>
-          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400">
-            <Lock className="w-3 h-3" />
+          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#002B36] text-[#86969C]">
+            <Lock className="w-3 h-3 text-[#4FC1FF]" />
             <span>Privacy Firewall: Fail-Closed</span>
           </div>
-          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 font-mono font-semibold">
+          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#002B36] text-[#E0E0E0] font-mono font-medium">
             <span>Raw PII Leaked: 0 Bytes</span>
           </div>
         </div>
 
         {/* Tab Navigation */}
-        <nav className="flex items-center gap-1 bg-slate-800/80 p-1 rounded-lg border border-slate-700/60">
+        <nav className="flex items-center gap-0.5 bg-[#002B36] p-1 rounded">
           <button
             onClick={() => setActiveTab('studio')}
-            className={`px-3 py-1.5 rounded-md text-xs font-semibold transition flex items-center gap-1.5 ${
-              activeTab === 'studio' ? 'bg-blue-600 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'
+            className={`px-3 py-1.5 rounded text-xs font-medium transition flex items-center gap-1.5 ${
+              activeTab === 'studio' ? 'bg-[#004052] text-[#E0E0E0] border-b-2 border-[#4FC1FF]' : 'text-[#86969C] hover:text-[#E0E0E0] hover:bg-[#003847]/40'
             }`}
           >
             <Activity className="w-3.5 h-3.5" />
@@ -353,8 +353,8 @@ export default function App() {
           </button>
           <button
             onClick={() => setActiveTab('dual_view')}
-            className={`px-3 py-1.5 rounded-md text-xs font-semibold transition flex items-center gap-1.5 ${
-              activeTab === 'dual_view' ? 'bg-blue-600 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'
+            className={`px-3 py-1.5 rounded text-xs font-medium transition flex items-center gap-1.5 ${
+              activeTab === 'dual_view' ? 'bg-[#004052] text-[#E0E0E0] border-b-2 border-[#4FC1FF]' : 'text-[#86969C] hover:text-[#E0E0E0] hover:bg-[#003847]/40'
             }`}
           >
             <Layers className="w-3.5 h-3.5" />
@@ -362,8 +362,8 @@ export default function App() {
           </button>
           <button
             onClick={() => setActiveTab('metrics')}
-            className={`px-3 py-1.5 rounded-md text-xs font-semibold transition flex items-center gap-1.5 ${
-              activeTab === 'metrics' ? 'bg-blue-600 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'
+            className={`px-3 py-1.5 rounded text-xs font-medium transition flex items-center gap-1.5 ${
+              activeTab === 'metrics' ? 'bg-[#004052] text-[#E0E0E0] border-b-2 border-[#4FC1FF]' : 'text-[#86969C] hover:text-[#E0E0E0] hover:bg-[#003847]/40'
             }`}
           >
             <Cpu className="w-3.5 h-3.5" />
@@ -371,8 +371,8 @@ export default function App() {
           </button>
           <button
             onClick={() => setActiveTab('docs')}
-            className={`px-3 py-1.5 rounded-md text-xs font-semibold transition flex items-center gap-1.5 ${
-              activeTab === 'docs' ? 'bg-blue-600 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'
+            className={`px-3 py-1.5 rounded text-xs font-medium transition flex items-center gap-1.5 ${
+              activeTab === 'docs' ? 'bg-[#004052] text-[#E0E0E0] border-b-2 border-[#4FC1FF]' : 'text-[#86969C] hover:text-[#E0E0E0] hover:bg-[#003847]/40'
             }`}
           >
             <FileText className="w-3.5 h-3.5" />
@@ -380,8 +380,8 @@ export default function App() {
           </button>
           <button
             onClick={() => setActiveTab('repo')}
-            className={`px-3 py-1.5 rounded-md text-xs font-semibold transition flex items-center gap-1.5 ${
-              activeTab === 'repo' ? 'bg-blue-600 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'
+            className={`px-3 py-1.5 rounded text-xs font-medium transition flex items-center gap-1.5 ${
+              activeTab === 'repo' ? 'bg-[#004052] text-[#E0E0E0] border-b-2 border-[#4FC1FF]' : 'text-[#86969C] hover:text-[#E0E0E0] hover:bg-[#003847]/40'
             }`}
           >
             <Code className="w-3.5 h-3.5" />
@@ -397,20 +397,20 @@ export default function App() {
             {/* Left 7 Columns: Synthetic Browser Target Page */}
             <div className="lg:col-span-7 flex flex-col gap-4">
               {/* Synthetic Browser Window Chrome */}
-              <div className="bg-slate-900 border border-slate-800 rounded-xl shadow-2xl overflow-hidden flex flex-col">
+              <div className="bg-[#00212B] rounded-lg overflow-hidden border border-[#003847]/40 flex flex-col">
                 {/* Browser Address Bar */}
-                <div className="bg-slate-800/90 px-4 py-2.5 border-b border-slate-700/60 flex items-center gap-3">
+                <div className="bg-[#001B24] px-4 py-2 border-b border-[#003847]/40 flex items-center gap-3">
                   <div className="flex items-center gap-1.5">
-                    <span className="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
-                    <span className="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
-                    <span className="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#003847] inline-block"></span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#003847] inline-block"></span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#003847] inline-block"></span>
                   </div>
-                  <div className="flex-1 bg-slate-950/80 rounded-md px-3 py-1 text-xs font-mono text-slate-300 flex items-center justify-between border border-slate-700/50">
+                  <div className="flex-1 bg-[#00212B] rounded px-3 py-1 text-xs font-mono text-[#86969C] flex items-center justify-between border border-[#003847]/40">
                     <span className="flex items-center gap-2">
-                      <Lock className="w-3 h-3 text-emerald-400" />
-                      <span className="text-slate-400">https://</span>portal.acme-corp.internal/settings
+                      <Lock className="w-3 h-3 text-[#4FC1FF]" />
+                      <span className="text-[#86969C]">https://</span>portal.acme-corp.internal/settings
                     </span>
-                    <span className="text-[10px] text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded font-sans">
+                    <span className="text-[10px] text-[#4FC1FF] bg-[#003847] px-1.5 py-0.5 rounded font-mono">
                       Target DOM
                     </span>
                   </div>
@@ -418,7 +418,7 @@ export default function App() {
                     <button
                       onClick={() => setShowOverlays(!showOverlays)}
                       className={`text-xs px-2.5 py-1 rounded font-medium transition flex items-center gap-1 ${
-                        showOverlays ? 'bg-blue-600 text-white' : 'bg-slate-700 text-slate-300'
+                        showOverlays ? 'bg-[#004052] text-[#4FC1FF]' : 'bg-[#003847] text-[#86969C]'
                       }`}
                       title="Toggle bounding box highlights"
                     >
@@ -429,34 +429,34 @@ export default function App() {
                 </div>
 
                 {/* Synthetic Page Body */}
-                <div className="p-6 bg-slate-900/60 relative">
+                <div className="p-5 bg-[#00212B] relative">
                   {/* Status Banner */}
                   {savedSuccess && (
-                    <div className="mb-4 bg-emerald-950/90 border border-emerald-500/80 text-emerald-200 px-4 py-3 rounded-lg flex items-center justify-between animate-in fade-in slide-in-from-top-2 duration-300">
+                    <div className="mb-4 bg-[#003847] border-l-2 border-[#4FC1FF] text-[#E0E0E0] px-4 py-2.5 rounded-r flex items-center justify-between">
                       <div className="flex items-center gap-2 text-sm font-semibold">
-                        <CheckCircle2 className="w-5 h-5 text-emerald-400" />
+                        <CheckCircle2 className="w-4 h-4 text-[#4FC1FF]" />
                         <span>Saved successfully! Changes updated in portal record.</span>
                       </div>
-                      <span className="text-xs bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded font-mono">
+                      <span className="text-xs bg-[#00212B] text-[#4FC1FF] px-2 py-0.5 rounded font-mono">
                         DOM click(btn_save) confirmed
                       </span>
                     </div>
                   )}
 
                   {/* Profile Header Card */}
-                  <div className="flex items-center justify-between pb-4 border-b border-slate-800 mb-6">
+                  <div className="flex items-center justify-between pb-3 border-b border-[#003847]/40 mb-5">
                     <div>
-                      <h2 className="text-lg font-bold text-white">Personal & Account Settings</h2>
-                      <p className="text-xs text-slate-400">Synthetic profile fixture for SIH/ISRO 26171 on-device privacy evaluation.</p>
+                      <h2 className="text-base font-semibold text-[#E0E0E0]">Personal & Account Settings</h2>
+                      <p className="text-xs text-[#86969C]">Synthetic profile fixture for SIH/ISRO 26171 on-device privacy evaluation.</p>
                     </div>
-                    <span className="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-full border border-slate-700">
+                    <span className="text-xs bg-[#002B36] text-[#86969C] px-2.5 py-1 rounded">
                       Active User Session
                     </span>
                   </div>
 
                   {/* Profile Avatar with Face Detection Overlay */}
-                  <div className="relative mb-6 p-4 bg-slate-950/60 rounded-lg border border-slate-800 flex items-center gap-4">
-                    <div className="relative w-20 h-20 rounded-full overflow-hidden border-2 border-sky-400/80 shadow-md">
+                  <div className="relative mb-5 p-3.5 bg-[#002B36] rounded-lg flex items-center gap-4">
+                    <div className="relative w-16 h-16 rounded-full overflow-hidden border border-[#003847]">
                       <img
                         src="/src/assets/images/profile_face_1790786594272.jpg"
                         alt="Profile Face"
@@ -465,39 +465,39 @@ export default function App() {
                         data-veil-type="face"
                       />
                       {showOverlays && (
-                        <div className="absolute inset-0 border-2 border-red-500 bg-red-500/20 flex flex-col items-center justify-center pointer-events-none">
-                          <span className="bg-red-600 text-white text-[9px] font-mono font-bold px-1 rounded">
+                        <div className="absolute inset-0 bg-[#00212B]/85 flex flex-col items-center justify-center pointer-events-none">
+                          <span className="text-[#4FC1FF] text-[9px] font-mono font-medium px-1 rounded bg-[#003847]">
                             [FACE MASKED]
                           </span>
                         </div>
                       )}
                     </div>
                     <div>
-                      <h4 className="text-sm font-semibold text-white">Biometric Profile Photo</h4>
-                      <p className="text-xs text-slate-400 mt-0.5">
+                      <h4 className="text-xs font-semibold text-[#E0E0E0]">Biometric Profile Photo</h4>
+                      <p className="text-xs text-[#86969C] mt-0.5">
                         Detected & masked on-device by MediaPipe Face Detector (224 KB WASM asset).
                       </p>
-                      <span className="inline-block mt-1 text-[10px] font-mono text-sky-400 bg-sky-500/10 px-2 py-0.5 rounded border border-sky-500/20">
+                      <span className="inline-block mt-1 text-[10px] font-mono text-[#4FC1FF] bg-[#003847] px-2 py-0.5 rounded">
                         data-veil-id="profile_photo"
                       </span>
                     </div>
                   </div>
 
                   {/* Form Grid with Live Bounding Box Annotations */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
                     {/* Full Name */}
                     <div className="relative">
-                      <label className="block text-xs font-semibold text-slate-300 mb-1">Full Name</label>
+                      <label className="block text-xs font-medium text-[#86969C] mb-1">Full Name</label>
                       <input
                         type="text"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full bg-slate-950 border border-slate-700/80 rounded-lg px-3 py-2 text-sm text-slate-100 focus:outline-none focus:border-blue-500"
+                        className="w-full bg-[#002B36] border border-[#003847] rounded px-3 py-2 text-sm text-[#E0E0E0] focus:outline-none focus:border-[#4FC1FF] transition-colors"
                         data-veil-id="input_fullname"
                       />
                       {showOverlays && (
                         <div className="absolute -top-1.5 right-1 pointer-events-none">
-                          <span className="bg-rose-600 text-white text-[9px] font-mono font-bold px-1.5 py-0.5 rounded shadow">
+                          <span className="bg-[#003847] text-[#4FC1FF] text-[9px] font-mono font-medium px-1.5 py-0.5 rounded">
                             [PERSON]
                           </span>
                         </div>
@@ -506,17 +506,17 @@ export default function App() {
 
                     {/* Email */}
                     <div className="relative">
-                      <label className="block text-xs font-semibold text-slate-300 mb-1">Work Email</label>
+                      <label className="block text-xs font-medium text-[#86969C] mb-1">Work Email</label>
                       <input
                         type="email"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full bg-slate-950 border border-slate-700/80 rounded-lg px-3 py-2 text-sm text-slate-100 focus:outline-none focus:border-blue-500"
+                        className="w-full bg-[#002B36] border border-[#003847] rounded px-3 py-2 text-sm text-[#E0E0E0] focus:outline-none focus:border-[#4FC1FF] transition-colors"
                         data-veil-id="input_email"
                       />
                       {showOverlays && (
                         <div className="absolute -top-1.5 right-1 pointer-events-none">
-                          <span className="bg-rose-600 text-white text-[9px] font-mono font-bold px-1.5 py-0.5 rounded shadow">
+                          <span className="bg-[#003847] text-[#4FC1FF] text-[9px] font-mono font-medium px-1.5 py-0.5 rounded">
                             [EMAIL]
                           </span>
                         </div>
@@ -525,17 +525,17 @@ export default function App() {
 
                     {/* Phone */}
                     <div className="relative">
-                      <label className="block text-xs font-semibold text-slate-300 mb-1">Phone Number</label>
+                      <label className="block text-xs font-medium text-[#86969C] mb-1">Phone Number</label>
                       <input
                         type="tel"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full bg-slate-950 border border-slate-700/80 rounded-lg px-3 py-2 text-sm text-slate-100 focus:outline-none focus:border-blue-500"
+                        className="w-full bg-[#002B36] border border-[#003847] rounded px-3 py-2 text-sm text-[#E0E0E0] focus:outline-none focus:border-[#4FC1FF] transition-colors"
                         data-veil-id="input_phone"
                       />
                       {showOverlays && (
                         <div className="absolute -top-1.5 right-1 pointer-events-none">
-                          <span className="bg-rose-600 text-white text-[9px] font-mono font-bold px-1.5 py-0.5 rounded shadow">
+                          <span className="bg-[#003847] text-[#4FC1FF] text-[9px] font-mono font-medium px-1.5 py-0.5 rounded">
                             [PHONE]
                           </span>
                         </div>
@@ -544,17 +544,17 @@ export default function App() {
 
                     {/* Password */}
                     <div className="relative">
-                      <label className="block text-xs font-semibold text-slate-300 mb-1">Password</label>
+                      <label className="block text-xs font-medium text-[#86969C] mb-1">Password</label>
                       <input
                         type="password"
                         value={formData.password}
                         onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                        className="w-full bg-slate-950 border border-slate-700/80 rounded-lg px-3 py-2 text-sm text-slate-100 focus:outline-none focus:border-blue-500"
+                        className="w-full bg-[#002B36] border border-[#003847] rounded px-3 py-2 text-sm text-[#E0E0E0] focus:outline-none focus:border-[#4FC1FF] transition-colors"
                         data-veil-id="input_password"
                       />
                       {showOverlays && (
                         <div className="absolute -top-1.5 right-1 pointer-events-none">
-                          <span className="bg-rose-600 text-white text-[9px] font-mono font-bold px-1.5 py-0.5 rounded shadow">
+                          <span className="bg-[#003847] text-[#4FC1FF] text-[9px] font-mono font-medium px-1.5 py-0.5 rounded">
                             [PASSWORD]
                           </span>
                         </div>
@@ -563,17 +563,17 @@ export default function App() {
 
                     {/* Credit Card */}
                     <div className="relative">
-                      <label className="block text-xs font-semibold text-slate-300 mb-1">Corporate Card</label>
+                      <label className="block text-xs font-medium text-[#86969C] mb-1">Corporate Card</label>
                       <input
                         type="text"
                         value={formData.card}
                         onChange={(e) => setFormData({ ...formData, card: e.target.value })}
-                        className="w-full bg-slate-950 border border-slate-700/80 rounded-lg px-3 py-2 text-sm text-slate-100 focus:outline-none focus:border-blue-500"
+                        className="w-full bg-[#002B36] border border-[#003847] rounded px-3 py-2 text-sm text-[#E0E0E0] focus:outline-none focus:border-[#4FC1FF] transition-colors"
                         data-veil-id="input_card"
                       />
                       {showOverlays && (
                         <div className="absolute -top-1.5 right-1 pointer-events-none">
-                          <span className="bg-rose-600 text-white text-[9px] font-mono font-bold px-1.5 py-0.5 rounded shadow">
+                          <span className="bg-[#003847] text-[#4FC1FF] text-[9px] font-mono font-medium px-1.5 py-0.5 rounded">
                             [CARD]
                           </span>
                         </div>
@@ -582,17 +582,17 @@ export default function App() {
 
                     {/* Indian PAN */}
                     <div className="relative">
-                      <label className="block text-xs font-semibold text-slate-300 mb-1">National Tax ID / PAN</label>
+                      <label className="block text-xs font-medium text-[#86969C] mb-1">National Tax ID / PAN</label>
                       <input
                         type="text"
                         value={formData.pan}
                         onChange={(e) => setFormData({ ...formData, pan: e.target.value })}
-                        className="w-full bg-slate-950 border border-slate-700/80 rounded-lg px-3 py-2 text-sm text-slate-100 focus:outline-none focus:border-blue-500"
+                        className="w-full bg-[#002B36] border border-[#003847] rounded px-3 py-2 text-sm text-[#E0E0E0] focus:outline-none focus:border-[#4FC1FF] transition-colors"
                         data-veil-id="input_pan"
                       />
                       {showOverlays && (
                         <div className="absolute -top-1.5 right-1 pointer-events-none">
-                          <span className="bg-rose-600 text-white text-[9px] font-mono font-bold px-1.5 py-0.5 rounded shadow">
+                          <span className="bg-[#003847] text-[#4FC1FF] text-[9px] font-mono font-medium px-1.5 py-0.5 rounded">
                             [PAN]
                           </span>
                         </div>
@@ -601,13 +601,13 @@ export default function App() {
                   </div>
 
                   {/* Action Buttons Row */}
-                  <div className="flex items-center justify-end gap-3 pt-4 border-t border-slate-800">
+                  <div className="flex items-center justify-end gap-3 pt-3 border-t border-[#003847]/40">
                     <button
                       type="button"
                       id="btn-cancel"
                       data-veil-id="btn_cancel"
                       onClick={() => setSavedSuccess(false)}
-                      className="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 text-sm font-medium hover:bg-slate-700 transition"
+                      className="px-4 py-2 rounded bg-[#003847] text-[#86969C] hover:text-[#E0E0E0] hover:bg-[#004052] text-xs font-medium transition"
                     >
                       Cancel
                     </button>
@@ -618,14 +618,14 @@ export default function App() {
                         id="btn-save"
                         data-veil-id="btn_save"
                         onClick={() => setSavedSuccess(true)}
-                        className="px-5 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold shadow-lg shadow-blue-600/30 transition flex items-center gap-1.5"
+                        className="px-5 py-2 rounded bg-[#004052] hover:bg-[#004052]/90 text-[#E0E0E0] hover:text-white text-xs font-semibold transition flex items-center gap-1.5 border border-[#4FC1FF]/30"
                       >
-                        <CheckCircle2 className="w-4 h-4" />
+                        <CheckCircle2 className="w-4 h-4 text-[#4FC1FF]" />
                         <span>Save Changes</span>
                       </button>
                       {showOverlays && (
                         <div className="absolute -top-6 right-0 pointer-events-none whitespace-nowrap">
-                          <span className="bg-emerald-600 text-white text-[9px] font-mono font-bold px-2 py-0.5 rounded shadow">
+                          <span className="bg-[#003847] text-[#4FC1FF] text-[9px] font-mono font-medium px-2 py-0.5 rounded">
                             [AGENT TARGET: Save Changes]
                           </span>
                         </div>
@@ -639,19 +639,19 @@ export default function App() {
             {/* Right 5 Columns: VEILAGENT Control Panel & Pipeline Visualizer */}
             <div className="lg:col-span-5 flex flex-col gap-4">
               {/* Task Control Card */}
-              <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-xl flex flex-col gap-4">
+              <div className="bg-[#00212B] rounded-lg p-5 border border-[#003847]/40 flex flex-col gap-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <Sparkles className="w-4 h-4 text-blue-400" />
-                    <h3 className="font-bold text-sm text-white">Agent Task Controller</h3>
+                    <Sparkles className="w-4 h-4 text-[#4FC1FF]" />
+                    <h3 className="font-semibold text-sm text-[#E0E0E0]">Agent Task Controller</h3>
                   </div>
                   <div className="flex items-center gap-1 text-xs">
                     <button
                       onClick={() => setMockMode(!mockMode)}
-                      className={`px-2.5 py-1 rounded text-[11px] font-semibold transition ${
+                      className={`px-2.5 py-1 rounded text-[11px] font-mono transition ${
                         mockMode
-                          ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30'
-                          : 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30'
+                          ? 'bg-[#003847] text-[#86969C] hover:text-[#E0E0E0]'
+                          : 'bg-[#004052] text-[#4FC1FF]'
                       }`}
                     >
                       {mockMode ? 'Mock VLM (Deterministic)' : 'Gemini 3.5 Flash-Lite'}
@@ -665,8 +665,8 @@ export default function App() {
                     onClick={() => handlePresetSelect('save', 'Find and click the Save Changes button')}
                     className={`px-2.5 py-1 rounded text-xs transition ${
                       activePreset === 'save'
-                        ? 'bg-blue-600 text-white font-medium'
-                        : 'bg-slate-800 text-slate-400 hover:text-slate-200'
+                        ? 'bg-[#004052] text-[#4FC1FF] font-medium'
+                        : 'bg-[#002B36] text-[#86969C] hover:text-[#E0E0E0]'
                     }`}
                   >
                     Click Save Changes
@@ -675,8 +675,8 @@ export default function App() {
                     onClick={() => handlePresetSelect('cancel', 'Click the Cancel button')}
                     className={`px-2.5 py-1 rounded text-xs transition ${
                       activePreset === 'cancel'
-                        ? 'bg-blue-600 text-white font-medium'
-                        : 'bg-slate-800 text-slate-400 hover:text-slate-200'
+                        ? 'bg-[#004052] text-[#4FC1FF] font-medium'
+                        : 'bg-[#002B36] text-[#86969C] hover:text-[#E0E0E0]'
                     }`}
                   >
                     Cancel Action
@@ -685,8 +685,8 @@ export default function App() {
                     onClick={() => handlePresetSelect('scroll', 'Scroll down to check bottom footer')}
                     className={`px-2.5 py-1 rounded text-xs transition ${
                       activePreset === 'scroll'
-                        ? 'bg-blue-600 text-white font-medium'
-                        : 'bg-slate-800 text-slate-400 hover:text-slate-200'
+                        ? 'bg-[#004052] text-[#4FC1FF] font-medium'
+                        : 'bg-[#002B36] text-[#86969C] hover:text-[#E0E0E0]'
                     }`}
                   >
                     Scroll Down
@@ -695,8 +695,8 @@ export default function App() {
                     onClick={() => handlePresetSelect('destructive', 'Delete and wipe all account records')}
                     className={`px-2.5 py-1 rounded text-xs transition ${
                       activePreset === 'destructive'
-                        ? 'bg-rose-600 text-white font-medium'
-                        : 'bg-slate-800 text-slate-400 hover:text-rose-400'
+                        ? 'bg-[#004052] text-[#F44747] font-medium'
+                        : 'bg-[#002B36] text-[#86969C] hover:text-[#F44747]'
                     }`}
                   >
                     Test Guard (Destructive)
@@ -705,12 +705,12 @@ export default function App() {
 
                 {/* Task Input Field */}
                 <div>
-                  <label className="block text-xs font-semibold text-slate-400 mb-1">User Task</label>
+                  <label className="block text-xs font-medium text-[#86969C] mb-1">User Task</label>
                   <input
                     type="text"
                     value={userTask}
                     onChange={(e) => setUserTask(e.target.value)}
-                    className="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 focus:outline-none focus:border-blue-500"
+                    className="w-full bg-[#002B36] border border-[#003847] rounded px-3 py-2 text-sm text-[#E0E0E0] focus:outline-none focus:border-[#4FC1FF] transition-colors"
                     placeholder="Enter natural language instruction for browser agent..."
                   />
                 </div>
@@ -720,77 +720,77 @@ export default function App() {
                   <button
                     onClick={handleScan}
                     disabled={isRunning}
-                    className="flex-1 px-4 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition flex items-center justify-center gap-1.5 border border-slate-700"
+                    className="flex-1 px-4 py-2.5 rounded bg-[#003847] hover:bg-[#004052] text-[#E0E0E0] text-xs font-semibold transition flex items-center justify-center gap-1.5"
                   >
-                    <RefreshCw className="w-3.5 h-3.5" />
+                    <RefreshCw className="w-3.5 h-3.5 text-[#4FC1FF]" />
                     <span>Analyze Page</span>
                   </button>
                   <button
                     onClick={handleRunAgent}
                     disabled={isRunning}
-                    className="flex-2 px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition flex items-center justify-center gap-2 shadow-lg shadow-blue-600/30 disabled:opacity-50"
+                    className="flex-2 px-5 py-2.5 rounded bg-[#4FC1FF] hover:brightness-110 text-[#00212B] text-xs font-bold transition flex items-center justify-center gap-2 disabled:opacity-50"
                   >
                     {isRunning ? (
                       <>
-                        <RefreshCw className="w-4 h-4 animate-spin" />
+                        <RefreshCw className="w-4 h-4 animate-spin text-[#00212B]" />
                         <span>Enforcing Privacy & Reasoning...</span>
                       </>
                     ) : (
                       <>
-                        <Play className="w-4 h-4 fill-current" />
+                        <Play className="w-4 h-4 fill-current text-[#00212B]" />
                         <span>Run End-to-End Loop</span>
                       </>
                     )}
                   </button>
                 </div>
 
-                <p className="text-[11px] text-slate-400 italic text-center">{statusMessage}</p>
+                <p className="text-[11px] text-[#86969C] font-mono text-center">{statusMessage}</p>
               </div>
 
               {/* End-to-End Pipeline Trace (The 8 Non-Negotiable Stages) */}
-              <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-xl flex-1 flex flex-col">
+              <div className="bg-[#00212B] rounded-lg p-5 border border-[#003847]/40 flex-1 flex flex-col">
                 <div className="flex items-center justify-between mb-3">
                   <div className="flex items-center gap-2">
-                    <Terminal className="w-4 h-4 text-emerald-400" />
-                    <h3 className="font-bold text-sm text-white">8-Stage Architectural Trace</h3>
+                    <Terminal className="w-4 h-4 text-[#4FC1FF]" />
+                    <h3 className="font-semibold text-sm text-[#E0E0E0]">8-Stage Architectural Trace</h3>
                   </div>
-                  <span className="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+                  <span className="text-[10px] font-mono text-[#86969C] bg-[#002B36] px-2 py-0.5 rounded">
                     Fail-Closed Active
                   </span>
                 </div>
 
                 <div className="space-y-2 flex-1 overflow-y-auto max-h-[380px] pr-1">
                   {pipelineSteps.length === 0 ? (
-                    <div className="p-6 text-center text-slate-500 text-xs flex flex-col items-center justify-center gap-2">
-                      <Activity className="w-8 h-8 text-slate-700" />
+                    <div className="p-6 text-center text-[#86969C] text-xs flex flex-col items-center justify-center gap-2">
+                      <Activity className="w-8 h-8 text-[#003847]" />
                       <span>Click "Run End-to-End Loop" to watch all 8 privacy and execution stages live.</span>
                     </div>
                   ) : (
                     pipelineSteps.map((step, idx) => (
                       <div
                         key={idx}
-                        className={`p-2.5 rounded-lg border text-xs transition ${
+                        className={`p-2.5 rounded text-xs transition ${
                           step.status === 'completed'
-                            ? 'bg-slate-950/80 border-emerald-500/30'
+                            ? 'bg-[#002B36] border-l-2 border-[#4FC1FF]'
                             : step.status === 'running'
-                            ? 'bg-blue-950/50 border-blue-500 animate-pulse'
+                            ? 'bg-[#003847] border-l-2 border-[#4FC1FF] animate-pulse'
                             : step.status === 'blocked'
-                            ? 'bg-rose-950/50 border-rose-500/50'
-                            : 'bg-slate-950/40 border-slate-800 text-slate-500'
+                            ? 'bg-[#002B36] border-l-2 border-[#F44747]'
+                            : 'bg-[#002B36]/50 text-[#86969C]'
                         }`}
                       >
-                        <div className="flex items-center justify-between font-semibold">
+                        <div className="flex items-center justify-between font-medium">
                           <span className="flex items-center gap-1.5">
-                            <span className="w-4 h-4 rounded-full bg-slate-800 text-[10px] flex items-center justify-center text-slate-300">
+                            <span className="w-4 h-4 rounded-full bg-[#003847] text-[10px] flex items-center justify-center text-[#E0E0E0]">
                               {step.stage}
                             </span>
-                            <span className={step.status === 'completed' ? 'text-white' : ''}>{step.title}</span>
+                            <span className={step.status === 'completed' ? 'text-[#E0E0E0]' : step.status === 'blocked' ? 'text-[#F44747]' : ''}>{step.title}</span>
                           </span>
                           {step.latencyMs !== undefined && (
-                            <span className="text-[10px] font-mono text-emerald-400">{step.latencyMs} ms</span>
+                            <span className="text-[10px] font-mono text-[#4FC1FF]">{step.latencyMs} ms</span>
                           )}
                         </div>
-                        <p className="text-[11px] text-slate-400 mt-1 pl-5">{step.detail}</p>
+                        <p className="text-[11px] text-[#86969C] mt-1 pl-5">{step.detail}</p>
                       </div>
                     ))
                   )}
@@ -803,20 +803,20 @@ export default function App() {
         {/* Tab 2: Dual Viewport Inspector */}
         {activeTab === 'dual_view' && (
           <div className="flex flex-col gap-6">
-            <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-xl">
+            <div className="bg-[#00212B] rounded-lg p-5 border border-[#003847]/40">
               <div className="flex items-center justify-between mb-4">
                 <div>
-                  <h3 className="text-base font-bold text-white">Dual Viewport Comparison</h3>
-                  <p className="text-xs text-slate-400">
+                  <h3 className="text-base font-semibold text-[#E0E0E0]">Dual Viewport Comparison</h3>
+                  <p className="text-xs text-[#86969C]">
                     Proving the core principle: Raw screen stays private on the client. Remote server receives ONLY sanitized semantic tokens.
                   </p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-xs font-mono px-2.5 py-1 rounded bg-rose-500/10 text-rose-400 border border-rose-500/20">
+                  <span className="text-xs font-mono px-2.5 py-1 rounded bg-[#002B36] text-[#86969C]">
                     Raw User View
                   </span>
-                  <ArrowRight className="w-4 h-4 text-slate-500" />
-                  <span className="text-xs font-mono px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                  <ArrowRight className="w-4 h-4 text-[#86969C]" />
+                  <span className="text-xs font-mono px-2.5 py-1 rounded bg-[#002B36] text-[#4FC1FF]">
                     Sanitized Wire View
                   </span>
                 </div>
@@ -824,77 +824,77 @@ export default function App() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Left: Raw Screen Representation */}
-                <div className="bg-slate-950 border border-rose-500/30 rounded-xl p-5 flex flex-col gap-3">
-                  <div className="flex items-center justify-between border-b border-slate-800 pb-2">
-                    <span className="font-bold text-xs text-rose-400 uppercase tracking-wider flex items-center gap-1.5">
-                      <Eye className="w-3.5 h-3.5" />
+                <div className="bg-[#002B36] rounded-lg p-4 border border-[#003847]/40 flex flex-col gap-3">
+                  <div className="flex items-center justify-between border-b border-[#003847]/40 pb-2">
+                    <span className="font-medium text-xs text-[#86969C] uppercase tracking-wider flex items-center gap-1.5">
+                      <Eye className="w-3.5 h-3.5 text-[#86969C]" />
                       Client Screen (Private)
                     </span>
-                    <span className="text-[10px] text-slate-400">Contains unredacted user credentials</span>
+                    <span className="text-[10px] text-[#86969C]">Contains unredacted user credentials</span>
                   </div>
 
                   <div className="space-y-2 text-xs">
-                    <div className="p-2 rounded bg-slate-900 border border-slate-800 flex justify-between">
-                      <span className="text-slate-400">Full Name:</span>
-                      <span className="font-mono text-slate-200">Rahul Sharma</span>
+                    <div className="p-2 rounded bg-[#00212B] flex justify-between">
+                      <span className="text-[#86969C]">Full Name:</span>
+                      <span className="font-mono text-[#E0E0E0]">Rahul Sharma</span>
                     </div>
-                    <div className="p-2 rounded bg-slate-900 border border-slate-800 flex justify-between">
-                      <span className="text-slate-400">Work Email:</span>
-                      <span className="font-mono text-slate-200">rahul.sharma@example.com</span>
+                    <div className="p-2 rounded bg-[#00212B] flex justify-between">
+                      <span className="text-[#86969C]">Work Email:</span>
+                      <span className="font-mono text-[#E0E0E0]">rahul.sharma@example.com</span>
                     </div>
-                    <div className="p-2 rounded bg-slate-900 border border-slate-800 flex justify-between">
-                      <span className="text-slate-400">Phone:</span>
-                      <span className="font-mono text-slate-200">+91 98765 43210</span>
+                    <div className="p-2 rounded bg-[#00212B] flex justify-between">
+                      <span className="text-[#86969C]">Phone:</span>
+                      <span className="font-mono text-[#E0E0E0]">+91 98765 43210</span>
                     </div>
-                    <div className="p-2 rounded bg-slate-900 border border-slate-800 flex justify-between">
-                      <span className="text-slate-400">Password:</span>
-                      <span className="font-mono text-slate-200">SuperSecretPassword123!</span>
+                    <div className="p-2 rounded bg-[#00212B] flex justify-between">
+                      <span className="text-[#86969C]">Password:</span>
+                      <span className="font-mono text-[#E0E0E0]">SuperSecretPassword123!</span>
                     </div>
-                    <div className="p-2 rounded bg-slate-900 border border-slate-800 flex justify-between">
-                      <span className="text-slate-400">Card:</span>
-                      <span className="font-mono text-slate-200">4532 8901 2345 6789</span>
+                    <div className="p-2 rounded bg-[#00212B] flex justify-between">
+                      <span className="text-[#86969C]">Card:</span>
+                      <span className="font-mono text-[#E0E0E0]">4532 8901 2345 6789</span>
                     </div>
-                    <div className="p-2 rounded bg-slate-900 border border-slate-800 flex justify-between">
-                      <span className="text-slate-400">Face Photo:</span>
-                      <span className="font-mono text-slate-200">Real Biometric Face (84x84px)</span>
+                    <div className="p-2 rounded bg-[#00212B] flex justify-between">
+                      <span className="text-[#86969C]">Face Photo:</span>
+                      <span className="font-mono text-[#E0E0E0]">Real Biometric Face (84x84px)</span>
                     </div>
                   </div>
                 </div>
 
                 {/* Right: Sanitized Transmitted Payload Representation */}
-                <div className="bg-slate-950 border border-emerald-500/30 rounded-xl p-5 flex flex-col gap-3">
-                  <div className="flex items-center justify-between border-b border-slate-800 pb-2">
-                    <span className="font-bold text-xs text-emerald-400 uppercase tracking-wider flex items-center gap-1.5">
-                      <ShieldCheck className="w-3.5 h-3.5" />
+                <div className="bg-[#002B36] rounded-lg p-4 border border-[#003847]/40 flex flex-col gap-3">
+                  <div className="flex items-center justify-between border-b border-[#003847]/40 pb-2">
+                    <span className="font-medium text-xs text-[#4FC1FF] uppercase tracking-wider flex items-center gap-1.5">
+                      <ShieldCheck className="w-3.5 h-3.5 text-[#4FC1FF]" />
                       Sanitized Wire Context (Safe)
                     </span>
-                    <span className="text-[10px] text-emerald-400 font-mono">Raw PII Transmitted: 0</span>
+                    <span className="text-[10px] text-[#4FC1FF] font-mono">Raw PII Transmitted: 0</span>
                   </div>
 
                   <div className="space-y-2 text-xs">
-                    <div className="p-2 rounded bg-slate-900 border border-slate-800 flex justify-between">
-                      <span className="text-slate-400">Full Name:</span>
-                      <span className="font-mono text-emerald-400 font-bold">[PERSON]</span>
+                    <div className="p-2 rounded bg-[#00212B] flex justify-between">
+                      <span className="text-[#86969C]">Full Name:</span>
+                      <span className="font-mono text-[#4FC1FF] font-medium">[PERSON]</span>
                     </div>
-                    <div className="p-2 rounded bg-slate-900 border border-slate-800 flex justify-between">
-                      <span className="text-slate-400">Work Email:</span>
-                      <span className="font-mono text-emerald-400 font-bold">[EMAIL]</span>
+                    <div className="p-2 rounded bg-[#00212B] flex justify-between">
+                      <span className="text-[#86969C]">Work Email:</span>
+                      <span className="font-mono text-[#4FC1FF] font-medium">[EMAIL]</span>
                     </div>
-                    <div className="p-2 rounded bg-slate-900 border border-slate-800 flex justify-between">
-                      <span className="text-slate-400">Phone:</span>
-                      <span className="font-mono text-emerald-400 font-bold">[PHONE]</span>
+                    <div className="p-2 rounded bg-[#00212B] flex justify-between">
+                      <span className="text-[#86969C]">Phone:</span>
+                      <span className="font-mono text-[#4FC1FF] font-medium">[PHONE]</span>
                     </div>
-                    <div className="p-2 rounded bg-slate-900 border border-slate-800 flex justify-between">
-                      <span className="text-slate-400">Password:</span>
-                      <span className="font-mono text-emerald-400 font-bold">[PASSWORD]</span>
+                    <div className="p-2 rounded bg-[#00212B] flex justify-between">
+                      <span className="text-[#86969C]">Password:</span>
+                      <span className="font-mono text-[#4FC1FF] font-medium">[PASSWORD]</span>
                     </div>
-                    <div className="p-2 rounded bg-slate-900 border border-slate-800 flex justify-between">
-                      <span className="text-slate-400">Card:</span>
-                      <span className="font-mono text-emerald-400 font-bold">[CARD]</span>
+                    <div className="p-2 rounded bg-[#00212B] flex justify-between">
+                      <span className="text-[#86969C]">Card:</span>
+                      <span className="font-mono text-[#4FC1FF] font-medium">[CARD]</span>
                     </div>
-                    <div className="p-2 rounded bg-slate-900 border border-slate-800 flex justify-between">
-                      <span className="text-slate-400">Face Photo:</span>
-                      <span className="font-mono text-sky-400 font-bold">[FACE MASKED]</span>
+                    <div className="p-2 rounded bg-[#00212B] flex justify-between">
+                      <span className="text-[#86969C]">Face Photo:</span>
+                      <span className="font-mono text-[#4FC1FF] font-medium">[FACE MASKED]</span>
                     </div>
                   </div>
                 </div>
@@ -902,19 +902,19 @@ export default function App() {
             </div>
 
             {/* Outgoing JSON Payload Safety Inspector */}
-            <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-xl">
+            <div className="bg-[#00212B] rounded-lg p-5 border border-[#003847]/40">
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-2">
-                  <Code className="w-4 h-4 text-sky-400" />
-                  <h4 className="text-sm font-bold text-white">Serialized Outgoing JSON Payload Inspection</h4>
+                  <Code className="w-4 h-4 text-[#4FC1FF]" />
+                  <h4 className="text-sm font-semibold text-[#E0E0E0]">Serialized Outgoing JSON Payload Inspection</h4>
                 </div>
                 <div className="flex items-center gap-2 text-xs">
-                  <span className="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono">
+                  <span className="px-2 py-0.5 rounded bg-[#003847] text-[#4FC1FF] font-mono">
                     Zero-Leak Check: VERIFIED
                   </span>
                 </div>
               </div>
-              <pre className="p-4 bg-slate-950 rounded-lg text-xs font-mono text-slate-300 overflow-x-auto border border-slate-800 max-h-72">
+              <pre className="p-4 bg-[#001B24] rounded text-xs font-mono text-[#E0E0E0] overflow-x-auto border border-[#003847]/40 max-h-72">
                 {JSON.stringify(lastOutgoingPayload || INITIAL_FIELDS, null, 2)}
               </pre>
             </div>
@@ -925,56 +925,56 @@ export default function App() {
         {activeTab === 'metrics' && (
           <div className="flex flex-col gap-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 shadow-lg">
-                <span className="text-xs text-slate-400 uppercase tracking-wider font-semibold">Local Perception Latency</span>
-                <div className="text-2xl font-extrabold text-sky-400 mt-1">38 ms</div>
-                <p className="text-[11px] text-slate-500 mt-1">Target: &lt; 150 ms (BlazeFace WASM)</p>
+              <div className="bg-[#00212B] border border-[#003847]/40 rounded-lg p-4">
+                <span className="text-xs text-[#86969C] uppercase tracking-wider font-medium">Local Perception Latency</span>
+                <div className="text-2xl font-bold text-[#4FC1FF] mt-1">38 ms</div>
+                <p className="text-[11px] text-[#86969C] mt-1">Target: &lt; 150 ms (BlazeFace WASM)</p>
               </div>
 
-              <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 shadow-lg">
-                <span className="text-xs text-slate-400 uppercase tracking-wider font-semibold">Redaction Overhead</span>
-                <div className="text-2xl font-extrabold text-emerald-400 mt-1">3 ms</div>
-                <p className="text-[11px] text-slate-500 mt-1">Target: &lt; 30 ms (Canvas Offscreen)</p>
+              <div className="bg-[#00212B] border border-[#003847]/40 rounded-lg p-4">
+                <span className="text-xs text-[#86969C] uppercase tracking-wider font-medium">Redaction Overhead</span>
+                <div className="text-2xl font-bold text-[#4FC1FF] mt-1">3 ms</div>
+                <p className="text-[11px] text-[#86969C] mt-1">Target: &lt; 30 ms (Canvas Offscreen)</p>
               </div>
 
-              <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 shadow-lg">
-                <span className="text-xs text-slate-400 uppercase tracking-wider font-semibold">PII Detection Recall</span>
-                <div className="text-2xl font-extrabold text-emerald-400 mt-1">100%</div>
-                <p className="text-[11px] text-slate-500 mt-1">6/6 fields + face detected</p>
+              <div className="bg-[#00212B] border border-[#003847]/40 rounded-lg p-4">
+                <span className="text-xs text-[#86969C] uppercase tracking-wider font-medium">PII Detection Recall</span>
+                <div className="text-2xl font-bold text-[#4FC1FF] mt-1">100%</div>
+                <p className="text-[11px] text-[#86969C] mt-1">6/6 fields + face detected</p>
               </div>
 
-              <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 shadow-lg">
-                <span className="text-xs text-slate-400 uppercase tracking-wider font-semibold">Raw PII Transmitted</span>
-                <div className="text-2xl font-extrabold text-emerald-400 mt-1">0 Bytes</div>
-                <p className="text-[11px] text-slate-500 mt-1">Zero leak invariant enforced</p>
+              <div className="bg-[#00212B] border border-[#003847]/40 rounded-lg p-4">
+                <span className="text-xs text-[#86969C] uppercase tracking-wider font-medium">Raw PII Transmitted</span>
+                <div className="text-2xl font-bold text-[#4FC1FF] mt-1">0 Bytes</div>
+                <p className="text-[11px] text-[#86969C] mt-1">Zero leak invariant enforced</p>
               </div>
             </div>
 
             {/* Field Breakdown Table */}
-            <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-xl">
-              <h3 className="text-sm font-bold text-white mb-3">Local Perception Layer Classification Breakdown</h3>
+            <div className="bg-[#00212B] border border-[#003847]/40 rounded-lg p-5">
+              <h3 className="text-sm font-semibold text-[#E0E0E0] mb-3">Local Perception Layer Classification Breakdown</h3>
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-xs">
-                  <thead className="border-b border-slate-800 text-slate-400">
+                  <thead className="border-b border-[#003847]/50 text-[#86969C]">
                     <tr>
-                      <th className="pb-2.5">Field / Asset</th>
-                      <th className="pb-2.5">Type</th>
-                      <th className="pb-2.5">Detector Layer</th>
-                      <th className="pb-2.5">Confidence</th>
-                      <th className="pb-2.5">Sanitized Replacement</th>
-                      <th className="pb-2.5">Status</th>
+                      <th className="pb-2.5 font-medium">Field / Asset</th>
+                      <th className="pb-2.5 font-medium">Type</th>
+                      <th className="pb-2.5 font-medium">Detector Layer</th>
+                      <th className="pb-2.5 font-medium">Confidence</th>
+                      <th className="pb-2.5 font-medium">Sanitized Replacement</th>
+                      <th className="pb-2.5 font-medium">Status</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-slate-800/60 font-mono text-[11px]">
+                  <tbody className="divide-y divide-[#003847]/30 font-mono text-[11px]">
                     {INITIAL_FIELDS.map((f) => (
-                      <tr key={f.id} className="hover:bg-slate-800/30">
-                        <td className="py-2.5 font-sans font-semibold text-slate-200">{f.name}</td>
-                        <td className="py-2.5 text-slate-400">{f.type}</td>
-                        <td className="py-2.5 text-slate-300 font-sans">{f.detectionSource}</td>
-                        <td className="py-2.5 text-sky-400 font-bold">{(f.confidence * 100).toFixed(0)}%</td>
-                        <td className="py-2.5 text-emerald-400 font-bold">{f.sanitizedToken}</td>
+                      <tr key={f.id} className="hover:bg-[#003847]/20">
+                        <td className="py-2.5 font-sans font-medium text-[#E0E0E0]">{f.name}</td>
+                        <td className="py-2.5 text-[#86969C]">{f.type}</td>
+                        <td className="py-2.5 text-[#E0E0E0] font-sans">{f.detectionSource}</td>
+                        <td className="py-2.5 text-[#4FC1FF] font-medium">{(f.confidence * 100).toFixed(0)}%</td>
+                        <td className="py-2.5 text-[#4FC1FF] font-bold">{f.sanitizedToken}</td>
                         <td className="py-2.5 font-sans">
-                          <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                          <span className="px-2 py-0.5 rounded bg-[#003847] text-[#4FC1FF] text-[10px]">
                             Protected
                           </span>
                         </td>
@@ -989,42 +989,42 @@ export default function App() {
 
         {/* Tab 4: Architecture & Documentation */}
         {activeTab === 'docs' && (
-          <div className="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl flex flex-col gap-6">
+          <div className="bg-[#00212B] border border-[#003847]/40 rounded-lg p-6 flex flex-col gap-6">
             <div>
-              <h3 className="text-lg font-bold text-white">System Architecture & Threat Model Documentation</h3>
-              <p className="text-xs text-slate-400 mt-1">
+              <h3 className="text-base font-semibold text-[#E0E0E0]">System Architecture & Threat Model Documentation</h3>
+              <p className="text-xs text-[#86969C] mt-1">
                 Full technical specification detailing the Device-Cloud Privacy Boundary, Fail-Closed Gates, and Local Action Guard.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="p-4 bg-slate-950 rounded-lg border border-slate-800">
-                <h4 className="font-bold text-sm text-sky-400 mb-2 flex items-center gap-1.5">
-                  <ShieldCheck className="w-4 h-4" />
+              <div className="p-4 bg-[#002B36] rounded-lg border border-[#003847]/40">
+                <h4 className="font-semibold text-sm text-[#4FC1FF] mb-2 flex items-center gap-1.5">
+                  <ShieldCheck className="w-4 h-4 text-[#4FC1FF]" />
                   The 4 Invariant Principles
                 </h4>
-                <ul className="text-xs space-y-2 text-slate-300">
-                  <li><strong>1. Local Perception:</strong> Neural vision (MediaPipe) and DOM parsing execute entirely in the browser context.</li>
-                  <li><strong>2. Local Privacy Enforcement:</strong> All semantic replacement and canvas masking complete before network dispatch.</li>
-                  <li><strong>3. Remote Reasoning:</strong> The VLM receives only structured tokens ([EMAIL], [CARD]) alongside structural geometry.</li>
-                  <li><strong>4. Local Action Validation:</strong> The server only proposes actions; the browser verifies validity and executes.</li>
+                <ul className="text-xs space-y-2 text-[#E0E0E0]">
+                  <li><strong className="text-[#4FC1FF]">1. Local Perception:</strong> Neural vision (MediaPipe) and DOM parsing execute entirely in the browser context.</li>
+                  <li><strong className="text-[#4FC1FF]">2. Local Privacy Enforcement:</strong> All semantic replacement and canvas masking complete before network dispatch.</li>
+                  <li><strong className="text-[#4FC1FF]">3. Remote Reasoning:</strong> The VLM receives only structured tokens ([EMAIL], [CARD]) alongside structural geometry.</li>
+                  <li><strong className="text-[#4FC1FF]">4. Local Action Validation:</strong> The server only proposes actions; the browser verifies validity and executes.</li>
                 </ul>
               </div>
 
-              <div className="p-4 bg-slate-950 rounded-lg border border-slate-800">
-                <h4 className="font-bold text-sm text-rose-400 mb-2 flex items-center gap-1.5">
-                  <AlertTriangle className="w-4 h-4" />
+              <div className="p-4 bg-[#002B36] rounded-lg border border-[#003847]/40">
+                <h4 className="font-semibold text-sm text-[#F44747] mb-2 flex items-center gap-1.5">
+                  <AlertTriangle className="w-4 h-4 text-[#F44747]" />
                   Fail-Closed Policy
                 </h4>
-                <p className="text-xs text-slate-300 leading-relaxed">
+                <p className="text-xs text-[#E0E0E0] leading-relaxed">
                   If the on-device visual model fails to initialize, encounters a WebAssembly timeout, or if the Outgoing Payload Validator finds any unredacted credential, the transmission is <strong>immediately aborted</strong>. Under no circumstances will raw pixels or unredacted values be transmitted to the server as a fallback.
                 </p>
               </div>
             </div>
 
-            <div className="p-4 bg-slate-950 rounded-lg border border-slate-800 font-mono text-xs text-slate-300">
-              <div className="text-slate-400 font-bold mb-2">Available Documentation Files in Repository:</div>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+            <div className="p-4 bg-[#002B36] rounded-lg border border-[#003847]/40 font-mono text-xs text-[#86969C]">
+              <div className="text-[#E0E0E0] font-medium mb-2">Available Documentation Files in Repository:</div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-[#86969C]">
                 <span>• docs/ARCHITECTURE.md</span>
                 <span>• docs/DEMO_RUNBOOK.md</span>
                 <span>• docs/SECURITY.md</span>
@@ -1041,46 +1041,46 @@ export default function App() {
 
         {/* Tab 5: Extension Package & Explorer */}
         {activeTab === 'repo' && (
-          <div className="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl flex flex-col gap-6">
+          <div className="bg-[#00212B] border border-[#003847]/40 rounded-lg p-6 flex flex-col gap-6">
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="text-lg font-bold text-white">Chrome Manifest V3 Extension & FastAPI Backend</h3>
-                <p className="text-xs text-slate-400 mt-1">
+                <h3 className="text-base font-semibold text-[#E0E0E0]">Chrome Manifest V3 Extension & FastAPI Backend</h3>
+                <p className="text-xs text-[#86969C] mt-1">
                   Ready-to-build source trees matching the non-negotiable hackathon specification.
                 </p>
               </div>
               <div className="flex gap-2">
-                <span className="text-xs bg-blue-500/10 text-blue-400 border border-blue-500/20 px-3 py-1.5 rounded-lg font-mono">
+                <span className="text-xs bg-[#003847] text-[#4FC1FF] px-3 py-1.5 rounded font-mono">
                   extension/dist (Ready for Load Unpacked)
                 </span>
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="p-4 bg-slate-950 rounded-lg border border-slate-800">
-                <div className="font-bold text-sm text-white mb-2">1. Extension Directory</div>
-                <p className="text-xs text-slate-400 mb-3">Manifest V3 Chrome Extension with TypeScript, MediaPipe, and React popup.</p>
-                <div className="text-[11px] font-mono text-slate-300 space-y-1">
+              <div className="p-4 bg-[#002B36] rounded-lg border border-[#003847]/40">
+                <div className="font-semibold text-sm text-[#E0E0E0] mb-2">1. Extension Directory</div>
+                <p className="text-xs text-[#86969C] mb-3">Manifest V3 Chrome Extension with TypeScript, MediaPipe, and React popup.</p>
+                <div className="text-[11px] font-mono text-[#4FC1FF] bg-[#001B24] p-2.5 rounded space-y-1">
                   <div>cd extension</div>
                   <div>npm install</div>
                   <div>npm run build</div>
                 </div>
               </div>
 
-              <div className="p-4 bg-slate-950 rounded-lg border border-slate-800">
-                <div className="font-bold text-sm text-white mb-2">2. FastAPI Backend</div>
-                <p className="text-xs text-slate-400 mb-3">FastAPI server with Pydantic validation, Gemini 3.5 Flash-Lite, and Mock VLM.</p>
-                <div className="text-[11px] font-mono text-slate-300 space-y-1">
+              <div className="p-4 bg-[#002B36] rounded-lg border border-[#003847]/40">
+                <div className="font-semibold text-sm text-[#E0E0E0] mb-2">2. FastAPI Backend</div>
+                <p className="text-xs text-[#86969C] mb-3">FastAPI server with Pydantic validation, Gemini 3.5 Flash-Lite, and Mock VLM.</p>
+                <div className="text-[11px] font-mono text-[#4FC1FF] bg-[#001B24] p-2.5 rounded space-y-1">
                   <div>cd server</div>
                   <div>pip install -r requirements.txt</div>
                   <div>uvicorn app.main:app --port 8000</div>
                 </div>
               </div>
 
-              <div className="p-4 bg-slate-950 rounded-lg border border-slate-800">
-                <div className="font-bold text-sm text-white mb-2">3. Docker Compose</div>
-                <p className="text-xs text-slate-400 mb-3">All-in-one containerized deployment for server and demo site.</p>
-                <div className="text-[11px] font-mono text-slate-300 space-y-1">
+              <div className="p-4 bg-[#002B36] rounded-lg border border-[#003847]/40">
+                <div className="font-semibold text-sm text-[#E0E0E0] mb-2">3. Docker Compose</div>
+                <p className="text-xs text-[#86969C] mb-3">All-in-one containerized deployment for server and demo site.</p>
+                <div className="text-[11px] font-mono text-[#4FC1FF] bg-[#001B24] p-2.5 rounded space-y-1">
                   <div>docker-compose up -d</div>
                 </div>
               </div>
@@ -1091,22 +1091,22 @@ export default function App() {
 
       {/* Destructive Action Modal */}
       {showDestructiveModal && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-slate-900 border border-rose-500/50 rounded-xl p-6 max-w-md w-full shadow-2xl animate-in zoom-in-95 duration-200">
-            <div className="flex items-center gap-3 text-rose-400 mb-3">
-              <AlertTriangle className="w-6 h-6" />
-              <h3 className="text-base font-bold text-white">Local Action Guard Alert</h3>
+        <div className="fixed inset-0 bg-[#001B24]/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-[#00212B] border border-[#003847] rounded-lg p-6 max-w-md w-full shadow-xl animate-in zoom-in-95 duration-200">
+            <div className="flex items-center gap-3 text-[#F44747] mb-3">
+              <AlertTriangle className="w-6 h-6 text-[#F44747]" />
+              <h3 className="text-base font-semibold text-[#E0E0E0]">Local Action Guard Alert</h3>
             </div>
-            <p className="text-xs text-slate-300 leading-relaxed mb-4">
+            <p className="text-xs text-[#E0E0E0] leading-relaxed mb-4">
               The proposed task <strong>"Delete and wipe all account records"</strong> was intercepted by the <strong>Local Action Guard</strong>. Destructive actions require explicit human confirmation before the browser is allowed to execute them.
             </p>
-            <div className="p-3 bg-slate-950 rounded-lg text-xs font-mono text-slate-400 mb-4 border border-slate-800">
+            <div className="p-3 bg-[#002B36] rounded text-xs font-mono text-[#86969C] mb-4 border border-[#003847]/40">
               Policy: FLAG_DESTRUCTIVE_KEYWORD (delete/wipe/terminate)
             </div>
             <div className="flex justify-end gap-2">
               <button
                 onClick={() => setShowDestructiveModal(false)}
-                className="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 text-xs font-semibold hover:bg-slate-700"
+                className="px-4 py-2 rounded bg-[#003847] text-[#86969C] hover:text-[#E0E0E0] hover:bg-[#004052] text-xs font-medium"
               >
                 Abort Action (Safe)
               </button>
@@ -1115,7 +1115,7 @@ export default function App() {
                   setShowDestructiveModal(false);
                   setStatusMessage('Destructive action manually confirmed by user.');
                 }}
-                className="px-4 py-2 rounded-lg bg-rose-600 text-white text-xs font-semibold hover:bg-rose-500"
+                className="px-4 py-2 rounded bg-[#F44747] text-white text-xs font-semibold hover:brightness-110"
               >
                 Allow Execution
               </button>
@@ -1125,13 +1125,13 @@ export default function App() {
       )}
 
       {/* Footer */}
-      <footer className="border-t border-slate-800/80 bg-slate-950 py-4 px-6 text-center text-xs text-slate-500 flex flex-wrap justify-between items-center gap-2">
+      <footer className="border-t border-[#003847]/40 bg-[#00212B] py-3.5 px-6 text-xs text-[#86969C] flex flex-wrap justify-between items-center gap-2">
         <div className="flex items-center gap-2">
           <span>VEILAGENT — Smart India Hackathon / ISRO Problem 26171</span>
-          <span className="text-slate-700">•</span>
+          <span className="text-[#003847]">•</span>
           <span>Theme: Smart Automation</span>
         </div>
-        <div className="text-slate-400 font-mono text-[11px]">
+        <div className="text-[#86969C] font-mono text-[11px]">
           Local Perception + Local Privacy + Remote Reasoning + Local Validation
         </div>
       </footer>

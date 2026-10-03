@@ -17,7 +17,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   }
 
   if (message.type === 'CAPTURE_SCREENSHOT') {
-    chrome.tabs.captureVisibleTab(undefined, { format: 'jpeg', quality: 80 })
+    chrome.tabs.captureVisibleTab({ format: 'jpeg', quality: 80 })
       .then((dataUrl) => sendResponse({ dataUrl }))
       .catch((err) => sendResponse({ error: err.message }));
     return true;
